@@ -1,0 +1,371 @@
+
+/* Page settings */
+html { 
+    background-color: rgb(244, 246, 248);
+    font-size: 100%;
+    font-family: 'Exo', sans-serif;
+    /* background: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0,0.4)), url("tunnel.jpeg") no-repeat center center fixed;  */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: rgb(39, 36, 36)
+  }
+  #tunnel { 
+    background-image: url("tunnel.jpeg");
+    height: 30rem;
+}
+#tunnel, #books, #desk, #proj-image {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-size: 93.5%;
+}
+#books {
+    background-image: url("books.jpg");
+    grid-column: 2 / 4;
+    height: 30rem;
+}
+#desk {
+    background-image: url("expertise.jpg");
+    grid-column: 2 / 4;
+    height: 30rem;
+}
+#proj-image {
+    background-image: url("projects.jpeg");
+    grid-column: 2 / 4;
+    height: 30rem;
+}
+/* #connect-image {
+    background-image: url("connect.jpeg");
+    grid-column: 2 / 4;
+    
+} */
+
+  h2 {
+    text-align: center;
+    margin: 2.0rem;
+    font-size: 2.5rem;      
+  }
+  h3 {
+    text-align: center;
+    margin: 2rem;
+    font-size: 2rem;  
+  }
+  html li, #submit_button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+ }
+ html p {
+  margin: 1rem 5% 0 5%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1rem 1fr 1fr 1rem;
+    grid-gap: 0.3rem;
+}
+.container > * {
+    grid-column: 2 / 4;
+    min-width: 0;
+}
+img {
+    max-height: 5rem;
+}
+/* ----------Navigation Bar Section----------------- */  
+.navbar {
+    margin: 1%;
+    display: grid;
+    padding: 1rem 0;
+    grid-template: 1fr / 5fr;
+    justify-items: right;
+    /* grid-template-areas:
+    " . . . . . am ew me pr gi"; */
+    }
+nav .nav-link {
+      line-height: 1rem;
+      font-size: 0.9rem;
+      padding: 0 0.3rem;
+      /* margin: 0 0.5rem 0 0.5rem; */
+      text-decoration: none;
+      transition: color 0.25s;
+      color: rgb(32, 30, 30);
+      font-family: 'Lato', sans-serif;
+    }
+.nav-pipe {
+        border-right: rgb(154, 155, 152) 1px solid;
+    }
+.nav-link:hover{
+      font-weight: bold;
+    }
+/* -------------Presentation animation------------- */
+.title {
+    font-size: 2.3rem;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(15, 15, 15);
+    margin: 15% 0 0 20%;
+    animation: move 3s;
+  -webkit-animation: move 3s;
+ }
+@keyframes move {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+    to {
+      margin-left: 20%;
+      width: 100%;
+    }
+  }
+@-webkit-keyframes move {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 20%;
+      width: 100%;
+    }
+  }
+    
+    /*------- About me Section -------------*/
+
+.title-about-me {
+    text-align: center;
+}
+.activities {
+    text-align: center;
+    height: 10rem;
+}
+.activities img {
+    padding: 2.5rem 2rem;
+}
+
+/* Education and Work, my expertise and my projects columns set up */
+.c-edu, .f-e, .ruby { 
+    grid-column: 2 / 3
+}
+.c-work, .b-e, .rails {
+    grid-column: 3 / 4
+}
+.ul-edu, .ul-work {
+    padding-left: 10rem;
+}
+.f-e, .b-e {
+    text-align: center;
+}
+.fe-list, .be-list {
+    list-style-type: none;
+    padding: 0;
+}
+.ruby-icon, .rails-icon {
+    padding: 3%;
+    /* display: block; */
+    transition: all 0.5s;
+}
+.html-icon, .css-icon {
+    padding: 3% 0;
+    /* display: block; */
+    transition: all 0.5s;
+}
+.d-mob, .d-laptop {
+    text-align: center;
+    margin-top: 1rem;
+}
+/* Add a shaking animation to images */
+.laptop:hover, .mob-image:hover {
+    animation: shake 0.5s; 
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite; 
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.html-icon:hover, .css-icon:hover{             /* Some animations */
+    transform: rotate(360deg) scale(1.2);
+}
+.rails-icon:hover, .ruby-icon:hover{
+    transform: skew(30deg, 20deg);
+}
+
+/* Get in touch section */
+.t_touch {
+    margin-bottom: 2rem;
+}
+/* Contact form set up*/
+@media only screen and (min-width: 768px) {
+form {
+    margin-top: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    }
+  .required {
+    font-size: 1.2rem;
+    }
+  #name, #email, #message {
+    width: 40%;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    background-color: rgb(133, 140, 146)
+    }
+}
+  #submit_button {
+    width: 10rem;
+    background-color: rgb(175, 170, 170);
+    font-weight: 500;
+    color: #000;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.9);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* --------- Contact me social media and github icons section ---- */
+  #link-icons {
+    text-align: right;
+    height: 5rem;
+    margin: 2rem 10rem 2rem 0;
+    }
+    .linkedin {
+        padding: 0 1rem 0 0;
+        max-height: 4.5rem;
+    }
+  
+  /* line divider */
+  hr {
+    margin-left: 15%;
+    margin-top: 3rem;
+    text-align: center;
+    width: 70%;
+    border-color: gray;
+  }
+  /* Back to top link */
+  .to-top {
+      margin-left: 0.5rem;
+      position: fixed;
+      bottom: 2rem;
+      width: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: rgb(32, 32, 32);
+    }
+  .to-top:hover {
+      color: red;
+      font-weight: bold;
+    }
+
+/*--------- Responsive design for mobile phones ---------*/
+@media only screen and (max-width: 768px) {
+.container {
+    display: block
+}
+#tunnel, #books, #desk, #proj-image {
+    height: 15rem;
+}
+img {
+    max-height: 3rem;
+}
+body {
+    margin: 0;
+}
+.navbar {
+    display: flex;
+    text-align: center;
+    padding: 1rem 1rem;
+}
+.nav > a{
+    font-size: 0.5rem;
+}
+.title {
+    font-size: 1.2rem;
+    margin: 1rem;
+    text-align: center;
+}
+h2 {
+    font-size: 1.1rem;
+    margin: 1.2rem 1rem 0.5rem 1rem;
+}
+h3 {
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+.ul-edu, .ul-work {
+    margin: 0 0.7rem;
+    padding-left: 40px;
+}
+
+html li, #submit_button {
+    font-size: 0.7rem;
+ }
+ html p {
+  font-size: 0.7rem;
+  margin: 0 2rem 0 2rem;
+}
+.activities { 
+    text-align: center;
+    height: 4rem;
+}
+.activities img {
+    padding: 1rem 0.3rem;
+    height: 2rem;
+}
+.fe-list, .be-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+.f-e, .b-e {
+    text-align: center;
+}
+.ruby-icon, .rails-icon {
+    padding: 3%;
+}
+.html-icon, .css-icon {
+    padding: 3% 0;
+}
+.to-top {
+    font-size: 0.5rem;
+    height: 3rem;
+    width: 1rem;
+}
+/* form set up */
+form {
+    text-align: center
+}
+.row {
+    padding-bottom: 0.5rem;
+}
+.input {
+    margin-top: 0.3rem;
+}
+#link-icons {
+    margin: 0.8rem 3rem 1rem 0;
+    height: 1rem;
+}
+#link-icons img {
+    box-sizing: border-box;
+    height: 100%;
+}
+.linkedin {
+    padding: 0 0.5rem 0 0;
+    max-height: 1.8rem;
+}
+}
+
