@@ -296,7 +296,9 @@ body {
 }
 .title {
     font-size: 1.2rem;
-    margin: 1rem;
+    position: relative;
+    top: 5rem;
+    margin-left: 1rem;
     text-align: center;
 }
 h2 {
